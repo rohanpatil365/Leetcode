@@ -11,18 +11,12 @@ class Solution {
         
         int count = 0;
         
-        for(int i=2;i<rootn;i++){
+        for(int i=2;i<n;i++){
             if(!notPrime[i]){
                 count++;
                 for(int j=2;j*i < n;j++){
                     notPrime[i*j] = true;
                 }
-            }
-        }
-        
-        for(int i=rootn;i<n;i++){
-            if(!notPrime[i]){
-                count++;
             }
         }
         
